@@ -102,3 +102,9 @@ body{
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 62.5rem) {
+  .miffy{
+    transform: rotate(4deg) scale(0.9);
+  }
+}
