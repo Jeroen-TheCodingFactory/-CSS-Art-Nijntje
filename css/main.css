@@ -1,74 +1,86 @@
-*{
+*,*::before,*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root{
+  /* colors */
+  --background-color: #ECDA41;
+  --miffy-color: #fff;
+  --border-color: #000;
+  /* borders */
+  --border: 1rem solid black;
+}
 html{
   font-size: 62.5%;
 }
+
 body{
-  background-color: #ECDA41;
-  display:flex;
+  background-color: var(--background-color);
   height:100vh;
-  align-items: center;
-  justify-content: center;
+  width:100vw;
+  overflow: hidden;
 }
 
 .miffy{
   position: relative;
   transform: rotate(4deg);
 }
+
 .miffy__head{
   width: 30rem;
   height: 25rem;
-  background-color: white;
+  background-color: var(--miffy-color);
   border-radius: 50%;
   z-index: 1;
-  border: 1rem solid black;
+  border: var(--border)
 }
 
 .miffy__ear{
   position:absolute;
   width:10rem;
   height:20rem;
-  background-color: white;
+  background-color: var(--miffy-color);
+  z-index: 2;
+  border-radius: 50%;
+  border: var(--border);
+  border-bottom: 1rem solid transparent;
+}
+
+.miffy__ear--left{
   top:-23%;
   left:30%;
   transform:translate(-50%,-50%) rotate(-12deg);
-  z-index: 2;
-  border-radius: 50%;
-  border-left: 1rem solid black;
-  border-right: 1rem solid black;
-  border-top: 1rem solid black;
-  border-bottom: 1rem solid transparent;
 }
 
 .miffy__ear--right{
   left:65%;
   top: -24%;
-    transform:translate(-50%,-50%) rotate(9deg);
+  transform:translate(-50%,-50%) rotate(9deg);
 }
 
 .miffy__eye{
   height: 1.5rem;
   width:1.5rem;
-  background-color:black;
+  background-color:var(--border-color);
   border-radius: 50%;
   position: absolute;
   top:50%;
+}
+
+.miffy__eye--left{
   left:22%;
 }
 
 .miffy__eye--right{
-  top:50%;
   left:67%;
 }
 
 .miffy__mouth{
   width: 3.5rem;
   height: 0.5rem;
-  background-color: black;
+  background-color: var(--border-color);
   position: absolute;
   top:80%;
   left:40%;
@@ -78,9 +90,15 @@ body{
 .miffy__mouth--second{
   width: 3rem;
   height: 0.5rem;
-  background-color: black;
+  background-color: var(--border-color);
   position: absolute;
   top:80%;
   left:40%;
   transform:rotate(-25deg);
+}
+
+.u-flex-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
