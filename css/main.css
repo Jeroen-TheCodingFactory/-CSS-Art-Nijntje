@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: #ECDA41;
+  display:flex;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.miffy{
+  position: relative;
+  transform: rotate(4deg);
+}
+.miffy__head{
+  width: 30rem;
+  height: 25rem;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1rem solid black;
+}
+
+.miffy__ear{
+  position:absolute;
+  width:10rem;
+  height:20rem;
+  background-color: white;
+  top:-23%;
+  left:30%;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  z-index: 2;
+  border-radius: 50%;
+  border-left: 1rem solid black;
+  border-right: 1rem solid black;
+  border-top: 1rem solid black;
+  border-bottom: 1rem solid transparent;
+}
+
+.miffy__ear--right{
+  left:65%;
+  top: -24%;
+    transform:translate(-50%,-50%) rotate(9deg);
+}
+
+.miffy__eye{
+  height: 1.5rem;
+  width:1.5rem;
+  background-color:black;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:22%;
+}
+
+.miffy__eye--right{
+  top:50%;
+  left:67%;
+}
+
+.miffy__mouth{
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: black;
+  position: absolute;
+  top:80%;
+  left:40%;
+  transform:rotate(25deg);
+}
+
+.miffy__mouth--second{
+  width: 3rem;
+  height: 0.5rem;
+  background-color: black;
+  position: absolute;
+  top:80%;
+  left:40%;
+  transform:rotate(-25deg);
+}
